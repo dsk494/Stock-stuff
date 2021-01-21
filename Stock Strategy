@@ -1,0 +1,19 @@
+import numpy as np 
+from sklearn.linear_model import LinearRegression
+from sklearn.svm import SVR
+# Setup client
+import pandas as pd
+import pandas_datareader as pdr
+from pandas import Series, DataFrame
+from datetime import datetime
+!pip3 install iexfinance
+from pandas_datareader import data as web
+from iexfinance.refdata import get_symbols
+get_symbols(token="pk_fae9c40f4840416bb14bf4162d55067e")
+from datetime import datetime
+from iexfinance.stocks import get_historical_data
+from iexfinance.stocks import Stock
+
+a = Stock("MRNA", token="pk_fae9c40f4840416bb14bf4162d55067e")
+a.get_quote()
+ 
